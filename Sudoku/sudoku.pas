@@ -73,7 +73,7 @@ begin
     end; 
 end;                     
                                 
-<<<<<<< HEAD
+
 begin //*MAIN* func                
     start_game;
     gran_borad(3);
@@ -104,5 +104,5 @@ begin //*MAIN* func
     start_game; 
     gran_borad(3);
     print_borad;
->>>>>>> d7d4861 (update)
+
 end.
