@@ -1,11 +1,8 @@
 //fpc 3.0.4
 
 program sudoku;
-<<<<<<< HEAD
 type list=array [1..3] of integer;
-=======
 type list=array [1..3] of integer;sq_list = array [1..3,1..3] of integer;
->>>>>>> d7d4861 (update)
 var start_key:char;borad:array [1..9,1..9] of integer;l1,l2:integer;//global var
 
 procedure start_game();
