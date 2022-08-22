@@ -1,7 +1,11 @@
 //fpc 3.0.4
 
 program sudoku;
+<<<<<<< HEAD
 type list=array [1..3] of integer;
+=======
+type list=array [1..3] of integer;sq_list = array [1..3,1..3] of integer;
+>>>>>>> d7d4861 (update)
 var start_key:char;borad:array [1..9,1..9] of integer;l1,l2:integer;//global var
 
 procedure start_game();
@@ -69,8 +73,36 @@ begin
     end; 
 end;                     
                                 
+<<<<<<< HEAD
 begin //*MAIN* func                
     start_game;
     gran_borad(3);
     for l1:=1 to 9 do for l2:=1 to 9 do write(borad[l1,l2]);
+
+
+procedure print_borad();
+var _box,_l,_l2,_row:integer;
+begin
+    writeln('-------+-------+-------+');
+    for _box:=1 to 3 do
+    begin
+        for _l:=0 to 2 do
+        begin
+            for _l2:=_box to _box+2 do
+            begin
+                write(' ');
+                for _row:=_l*3 +1 to _l*3+3 do 
+                    write(borad[_l2,_row],' ');
+                write('|');
+            end;
+            writeln();
+        end;
+        writeln('-------+-------+-------+');
+    end;
+end;
+begin //*MAIN* func                
+    start_game; 
+    gran_borad(3);
+    print_borad;
+>>>>>>> d7d4861 (update)
 end.
