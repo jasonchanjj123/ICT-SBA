@@ -1,7 +1,6 @@
 //fpc 3.0.4
 
 program sudoku;
-type list=array [1..3] of integer;
 type list=array [1..3] of integer;sq_list = array [1..3,1..3] of integer;
 var start_key:char;borad:array [1..9,1..9] of integer;l1,l2:integer;//global var
 
@@ -17,7 +16,7 @@ end;
 
 function get_column(i:integer):list; //sub func of check_valid {grand_borad.check_valid.get_group}
 var r:list;_l:integer;
-begin
+begin 
     case i of 
         1,4,7:for _l:=0 to 2 do r[_l]:=_l*3+1;
         2,5,8:for _l:=0 to 2 do r[_l]:=_l*3+2;
@@ -43,7 +42,7 @@ begin
     check_valid:=true;
     for _l in borad[box] do if _l=num then check_valid:=false; //check self.box
     for _l in get_column(box) do for _l2 in get_column(i) do if borad[_l,_l2]=num then check_valid:=false; //check column
-    for _l in get_row(box) do for _l2 in get_row(i)do if borad[_l,_l2]=num then check_valid:=false;
+    for _l in get_row(box) do for _l2 in get_row(i)do if borad[_l,_l2]=num then check_valid:=false; //check row
 end;
 
 procedure gran_borad(level:integer);
@@ -71,11 +70,6 @@ begin
 end;                     
                                 
 
-begin //*MAIN* func                
-    start_game;
-    gran_borad(3);
-    for l1:=1 to 9 do for l2:=1 to 9 do write(borad[l1,l2]);
-
 
 procedure print_borad();
 var _box,_l,_l2,_row:integer;
@@ -97,6 +91,7 @@ begin
         writeln('-------+-------+-------+');
     end;
 end;
+
 begin //*MAIN* func                
     start_game; 
     gran_borad(3);
