@@ -1,8 +1,12 @@
 //fpc 3.0.4
 
 program sudoku;
-type list=array [1..3] of integer;sq_list = array [1..3,1..3] of integer;
-var start_key:char;borad:array [1..9,1..9] of integer;l1,l2:integer;//global var
+type 
+    list=array [1..3] of integer;
+    sq_list = array [1..3,1..3] of integer;
+var 
+    start_key:char;borad:array [1..9,1..9] of integer;
+    l1,l2:integer;//global var
 
 procedure start_game();
 begin 
@@ -45,30 +49,7 @@ begin
     for _l in get_row(box) do for _l2 in get_row(i)do if borad[_l,_l2]=num then check_valid:=false; //check row
 end;
 
-procedure gran_borad(level:integer);
-var _index,_num:integer;
-begin                             
-    randomize;     
-    for l1:=1 to 9 do // init borad
-        for l2:=1 to 9 do 
-            borad[l1,l2]:=0;
-    
-    for l1:=1 to 9 do //box
-    begin
-        l2:=level+2+random(2); //number of numbers write to the box
-        repeat
-            if l2=0 then break;
-            _index:=random(9)+1;
-            _num:=random(9)+1; 
-            if check_valid(_index,_num,l1) then  //index:int,num:int,box:int
-            begin
-                borad[l1,_index] :=_num;
-                l2:=l2-1;
-            end;
-        until l2=0;
-    end; 
-end;                     
-                                
+               
 
 
 procedure print_borad();
