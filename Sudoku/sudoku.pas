@@ -41,7 +41,14 @@ begin
     get_row:=r; //return 
 end;
 
-
+function check_valid(i,num,box:integer):boolean;
+var _l,_l2:integer;
+begin
+    check_valid:=true;
+    for _l in borad[box] do if _l=num then check_valid:=false; //check self.box
+    for _l in get_column(box) do for _l2 in get_column(i) do if borad[_l,_l2]=num then check_valid:=false; //check column
+    for _l in get_row(box) do for _l2 in get_row(i)do if borad[_l,_l2]=num then check_valid:=false; //check row
+end;
 
                
 
