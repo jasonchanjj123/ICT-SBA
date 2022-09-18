@@ -45,27 +45,6 @@ end;
                
 
 
-procedure print_borad();
-var _box,_l,_l2,_row:integer;
-begin
-    writeln('-------+-------+-------+');
-    for _box:=1 to 3 do
-    begin
-        for _l:=0 to 2 do
-        begin
-            for _l2:=_box to _box+2 do
-            begin
-                write(' ');
-                for _row:=_l*3 +1 to _l*3+3 do 
-                    write(borad[_l2,_row],' ');
-                write('|');
-            end;
-            writeln();
-        end;
-        writeln('-------+-------+-------+');
-    end;
-end;
-
 begin //*MAIN* func                
     start_game; 
     gran_borad(3);
