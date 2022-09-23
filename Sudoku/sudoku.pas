@@ -19,6 +19,7 @@ begin
     end;
 end;               
 
+
 function get_column(i:integer):list; //sub func of check_valid {grand_borad.check_valid.get_group}
 var r:list;_l:integer;
 begin 
@@ -31,7 +32,8 @@ begin
 end;
 
 function get_row(i:integer):list;
-var r:list;_l:integer;
+var 
+    r:list;_l:integer;
 begin
     case i of 
         1,2,3:for _l:=0 to 2 do r[_l]:=1+_l;
@@ -41,10 +43,17 @@ begin
     get_row:=r; //return 
 end;
 
+function get_table(n:integer):integer;
+var 
+    f:file of string;
+    s:string;
+begin
+    AssignFile(f,'assest/test.txt');
+    reset(f);
+    readln(f,s); 
+end;
 
                
-
-
 begin //*MAIN* func                
     start_game; 
     gran_borad(3);

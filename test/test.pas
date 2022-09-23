@@ -1,5 +1,21 @@
 program test;
-var l,l2:integer;r:array [1..3] of integer;x:boolean;
+
+function get_table(n:integer):integer;
+var 
+    f:file of string;
+    arr:array of string;
 begin
-    for l:=1 to 3 do for l2:=1 to 3 do write(l2);
+    AssignFile(f,'assest/test.txt');
+    reset(f);
+    readln(f,s); 
+    while not Eof(f) do 
+    begin
+        SetLength(arr, Length(arr) + 1);
+        Readln(x, arr[High(Arr)]);
+    end;
+    CloseFile(f);
+    get_table:=arr;
+end;
+begin
+    write(get_table(3));
 end.
