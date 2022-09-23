@@ -1,8 +1,0 @@
-[header]
-name=todo
-comment=Add a todo comment item
-noselect=1
-cursorrow=0
-cursorcol=9
-[]
-{ TODO :  }

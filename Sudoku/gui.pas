@@ -1,2 +1,5 @@
-uses fpgui/src/gui/fpc_basegrid
+program pas_gui;
 
+
+uses
+    fpc_base;
