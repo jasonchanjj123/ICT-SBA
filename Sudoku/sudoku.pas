@@ -29,7 +29,7 @@ begin
         3,6,9:for _l:=0 to 2 do r[_l]:=_l*3+3;
     end;
     get_column:=r; //return 
-end;
+end;    
 
 function get_row(i:integer):list;
 var 
