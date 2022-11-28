@@ -1,5 +1,22 @@
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="paw.png" alt="Logo" width="80" height="80">
+  </a>
 
-## Sudoku with simple GUI built in pascal.
+  <h3 align="center">Sudoku built in pascal</h3>
+
+  <p align="center">
+    An awesome GUI built with javascript
+    <br />
+    <a href="https://github.com/jasonchanjj123/ICT-SBA/Sudoku"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="#about-the-project">About the project</a>
+    ·
+    <a href="#installation">About the installation</a>
+  </p>
+</div>
 
 <details>
   <summary>Table of Contents</summary>
@@ -18,7 +35,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -28,4 +44,13 @@
 
 ### built with
 
-* [![pascal][pascal.pas][]
+* [![Pascal][pascal.pas]][https://www.freepascal.org/]
+
+### installation 
+
+1. Install the Free Pascal Compiler at [https://www.freepascal.org/](https://www.freepascal.org/download.html)
+2. 2. Clone the repositories
+   ```sh
+   git clone https://github.com/jasonchanjj123/ICT-SBA.git
+   ```
+
