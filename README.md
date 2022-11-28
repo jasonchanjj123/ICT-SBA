@@ -49,7 +49,7 @@
 ### installation 
 
 1. Install the Free Pascal Compiler at [https://www.freepascal.org/](https://www.freepascal.org/download.html)
-2. 2. Clone the repositories
+2. Clone the repositories
    ```sh
    git clone https://github.com/jasonchanjj123/ICT-SBA.git
    ```
